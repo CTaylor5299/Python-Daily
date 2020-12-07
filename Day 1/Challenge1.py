@@ -5,9 +5,14 @@
  
 ###Then, the output should be: 'again and hello makes perfect practice world'
 
-long = "hello world and practice makes perfect and hello world again"
-x = long.split()
-list1 = list(dict.fromkeys(x))
-list1.sort()
-string = ' '.join(map(str, list1))
-print (string)
+def sort_string(long):
+    long = "hello world and practice makes perfect and hello world again"
+    x = long.split()
+
+    list1 = list(dict.fromkeys(x))
+
+    list1.sort()
+
+    string = ' '.join(map(str, list1))
+    return string
+print(sort_string("hello world and practice makes perfect and hello world again"))
